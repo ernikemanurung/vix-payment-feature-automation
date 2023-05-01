@@ -1,0 +1,86 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-30T19:12:44.802Z",
+    "end": "2023-04-30T19:13:14.581Z",
+    "duration": 29779,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ba13a1d4-2de6-4981-ab9b-d96b07303933",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TS001-checkout vix program\\TC010.cy.js",
+      "file": "cypress\\e2e\\TS001-checkout vix program\\TC010.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "User checkout program with invalid promo or referral",
+          "fullTitle": "User checkout program with invalid promo or referral",
+          "timedOut": null,
+          "duration": 29584,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos\",\n  \"value\": \"cypress\\\\e2e\\\\TS001-checkout vix program\\\\TC010.cy.js\"\n}",
+          "code": "//call login function\ncy.login();\ncy.wait(2000);\n//click rakamin academy's icon to access the main page\ncy.get(\"#root > div:nth-child(1) > nav > div > a > img\").click();\n//click hamburger menu\ncy.get(\"#root > div:nth-child(1) > div > img\").click();\ncy.wait(1000);\n//verify menu is exist\ncy.get('[data-cy=courses-navigation]').should('exist');\ncy.get('[data-cy=dashboard-page-button]').should('exist');\n//expand virtual internship and choose explore vix program\ncy.get('[data-cy=vix-dropdown-menu]').click({\n  multiple: true,\n  force: true\n});\ncy.get('[data-cy=explore-vix-navigation]').click({\n  multiple: true,\n  force: true\n});\n//verify system redirect to vix explore page\ncy.url().should('include', '/virtual-internship-experience/explore');\n//close hamburger menu pop up\ncy.get('#root > div > div:nth-child(3)').as('btn').click({\n  multiple: true,\n  force: true\n});\n//choose one program that will be registered\ncy.get('#root > div > div:nth-child(3)> div:nth-child(9)> div:nth-child(1)').click();\ncy.get('[data-cy=register-vix-button]').click({\n  force: true\n});\n//verify form application is shown by system\ncy.get('[data-cy=vix-form-title]').should('exist');\n//fill the vix application form\ncy.get('[data-cy=full-name-text-field').clear();\ncy.get('[data-cy=full-name-text-field').type('Seio');\ncy.get('[data-cy=phone-number-text-field').clear();\ncy.get('[data-cy=phone-number-text-field').type('089129876543');\ncy.get('[data-cy=linkedin-url-text-field').clear();\ncy.get('[data-cy=linkedin-url-text-field').type('https://linkein.com/seio');\ncy.get('[data-cy=vix-info-source-option-1]').click();\ncy.get('[data-cy=agreement-checkbox]').click();\n//verify submit button is clickable\ncy.get('[data-cy=vix-form-submit-button]').should('not.be.disabled');\n//click submit button\ncy.get('[data-cy=vix-form-submit-button]').click();\n//verify confirmation pop up is shown\ncy.get('[data-cy=confirmation-modal-title]').should('exist');\n//confirm to submit form filled in\ncy.get('[data-cy=button-confirm]').click();\n//verify system redirect to checkout page\ncy.url().should('include', '/checkout');\n//choose vip access\ncy.get('[data-cy=vip-access-checkbox]').click();\ncy.get('[data-cy=vip-access-checkbox]').click();\n//click pakai promo atau referal button\ncy.get('[data-cy=choose-coupon]').click();\ndocument.querySelector(\"body > div:nth-child(9) > div > div.ant-modal-wrap > div > div.ant-modal-content > div > div.sc-hUgeJs.cfvtGq > div.sc-kSEogv.bNnZvd > p\");\n//verify diskon pop up is shown\ncy.get('body > div:nth-child(9) > div > div.ant-modal-wrap > div > div.ant-modal-content > div > div:nth-child(1) > div:nth-child(1) > p').should('exist');\ncy.get('body > div:nth-child(9) > div > div.ant-modal-wrap > div > div.ant-modal-content > div > div:nth-child(3) > div > div > div > p').click();\n//verify diskon virtual internship pop up is shown\ncy.get('body > div:nth-child(9) > div > div.ant-modal-wrap > div > div.ant-modal-content > div > div:nth-child(1) > div:nth-child(1) > p').should('exist');\n//input promo/referal code\ncy.get('[data-cy=input-field-referral').type('TEST');\ncy.get('[data-cy=apply-referral-button]').click();\n//verify error message is shown\ncy.get('[data-cy=referral-error-container]').should('exist');\n//click lanjutkan pembayaran button\n//cy.get('[data-cy=continue-to-payment-button]').click()",
+          "err": {},
+          "uuid": "12d252bb-d7fc-4d58-b818-50f15b352ecb",
+          "parentUUID": "ba13a1d4-2de6-4981-ab9b-d96b07303933",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "12d252bb-d7fc-4d58-b818-50f15b352ecb"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 29584,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
