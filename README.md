@@ -1,5 +1,5 @@
 # vix_payment_feature_automation
-Test Automation with Cypress for VIX Payment Feature. There are 3 test scenario for this feature:
+Test Automation with Cypress for VIX Payment Feature in Rakamin Academy's website. There are 3 test scenario for this feature:
 1. TS001 - As a user, I want to be able to checkout after deciding to join VIX program, so that I will be able to make payment for the chosen program
 There 11 test case for this scenario:
   - TC001 - Authenticated user checkout program
