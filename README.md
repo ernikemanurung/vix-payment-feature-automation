@@ -2,6 +2,7 @@
 Test Automation with Cypress for VIX Payment Feature in Rakamin Academy's website.
 There are 3 test scenario for this feature:
 1. TS001 - As a user, I want to be able to checkout after deciding to join VIX program, so that I will be able to make payment for the chosen program
+
 There 11 test case for this scenario:
   - TC001 - Authenticated user checkout program
   - TC002 - Unauthenticated user checkout program
@@ -15,9 +16,11 @@ There 11 test case for this scenario:
   - TC010 - User checkout program with invalid promo or referral
   - TC011 - User checkout program without select any access (basic or vip)
 2.	TS002 - As a user, I want to be able to checkout after deciding to join VIX VIP Access program, so that I will be able to make payment for the chosen program
+
 There 2 test case for this scenario:
   - TC001 - User checkout program with VIP Access and Point VIP Access
   - TC002 - User checkout program with the program already registered as a Basic Access and upgrading to VIP Access
 3. TS003 - As a user, I want to be able to checkout after deciding to join VIX Basic Access Program, so that I will be able to make payment for the chosen program
+
 There 1 test case for this scenario:
   - TC001 - User checkout program with Basic Access
